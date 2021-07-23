@@ -15,7 +15,7 @@ our $schema = [str => {
         {value=>'foo123', valid=>0},
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:

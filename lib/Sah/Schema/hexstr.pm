@@ -18,7 +18,7 @@ our $schema = [str => {
         {value=>'a0ff12345678', valid=>1},
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:
