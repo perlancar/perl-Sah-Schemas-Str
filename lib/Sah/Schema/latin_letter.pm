@@ -1,5 +1,7 @@
 package Sah::Schema::latin_letter;
 
+use strict;
+
 # AUTHORITY
 # DATE
 # DIST
@@ -13,8 +15,9 @@ our $schema = [str => {
     examples => [
         {value=>'', valid=>0},
         {value=>'A', valid=>1},
-        {value=>'AB', valid=>0},
-        {value=>'1', valid=>0},
+        {value=>'AB', valid=>0, summary=>'Multiple letters'},
+        {value=>'1', valid=>0, summary=>'Non-letter'},
+        {value=>';', valid=>0, summary=>'Non-letter'},
     ],
 
 }];

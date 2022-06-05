@@ -1,5 +1,7 @@
 package Sah::Schema::latin_alphanum;
 
+use strict;
+
 # AUTHORITY
 # DATE
 # DIST

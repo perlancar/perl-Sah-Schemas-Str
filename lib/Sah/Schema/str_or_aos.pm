@@ -1,5 +1,7 @@
 package Sah::Schema::str_or_aos;
 
+use strict;
+
 # AUTHORITY
 # DATE
 # DIST
