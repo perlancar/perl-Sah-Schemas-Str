@@ -11,10 +11,11 @@ our $schema = [any => {
     summary => 'String or regex (if string is of the form `/.../`)',
     description => <<'_',
 
-If string is of the form of `/.../`, then it will be parsed as a regex.
-Currently modifiers `i`, `m`, and `s` after the second `/` are allowed.
+Either string or Regexp object is accepted.
 
-Otherwise, it's accepted as a plain string.
+If string is of the form of `/.../`, then it will be compiled into a Regexp
+object. Currently modifiers `i`, `m`, and `s` after the second `/` are allowed.
+If the regex pattern inside `/.../` is invalid, value will be rejected.
 
 _
     of => [
