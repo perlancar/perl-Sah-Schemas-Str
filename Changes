@@ -1,3 +1,11 @@
+0.006   2022-06-08  Released-By: PERLANCAR; Urgency: low
+
+        - No functional changes.
+
+        - [build] Rebuild with newer Pod::Weaver::Plugin::Sah::Schemas (0.070)
+          to tweak examples display.
+
+
 0.005   2022-06-08  Released-By: PERLANCAR; Urgency: medium
 
         - [schema str_or_re] Allow regex modifiers i, m, s.
@@ -23,4 +31,3 @@
 0.001   2019-08-23  Released-By: PERLANCAR; Released: no
 
         - First release.
-
