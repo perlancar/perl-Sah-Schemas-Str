@@ -31,7 +31,7 @@ sub filter {
         "",
         "do {",
         "    my \$tmp = $dt; ",
-        "    if (\$tmp =~ m!\\A/.*/\\z!s) { my \$re = eval \"qr\$tmp\"; if (\$@) { [\"Invalid regex: \$@\", \$tmp] } else { [undef, \$re] } } ",
+        "    if (\$tmp =~ m!\\A/.*/(?:[ims]*)\\z!s) { my \$re = eval \"qr\$tmp\"; if (\$@) { [\"Invalid regex: \$@\", \$tmp] } else { [undef, \$re] } } ",
         "    else { [undef, \$tmp] } ",
         "}",
     );
