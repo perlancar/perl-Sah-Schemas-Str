@@ -1,3 +1,11 @@
+0.007   2022-06-08  Released-By: PERLANCAR; Urgency: medium
+
+        - No functional changes.
+
+        - [schema str_or_re] [doc] Tweak description to mention that a
+          Regexp object is also accepted.
+
+
 0.006   2022-06-08  Released-By: PERLANCAR; Urgency: low
 
         - No functional changes.
