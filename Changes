@@ -1,3 +1,9 @@
+0.008   2022-06-09  Released-By: PERLANCAR; Urgency: medium
+
+        - [schema str_or_re] Allow string in the form of 'qr(...)' to also
+          be converted to Regexp object.
+
+
 0.007   2022-06-08  Released-By: PERLANCAR; Urgency: medium
 
         - No functional changes.
