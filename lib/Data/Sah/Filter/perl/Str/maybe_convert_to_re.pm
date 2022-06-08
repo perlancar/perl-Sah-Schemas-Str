@@ -12,10 +12,11 @@ use warnings;
 sub meta {
     +{
         v => 1,
-        summary => 'Convert string to regex if delimited by /.../',
+        summary => 'Convert string to regex if delimited by /.../ or qr(...)',
         might_fail => 1,
         args => {
             # XXX delimiter
+            # XXX allowed modifiers
         },
     };
 }
@@ -31,7 +32,7 @@ sub filter {
         "",
         "do {",
         "    my \$tmp = $dt; ",
-        "    if (\$tmp =~ m!\\A/.*/(?:[ims]*)\\z!s) { my \$re = eval \"qr\$tmp\"; if (\$@) { [\"Invalid regex: \$@\", \$tmp] } else { [undef, \$re] } } ",
+        "    if (\$tmp =~ m!\\A(?:/.*/|qr\\(.*\\))(?:[ims]*)\\z!s) { my \$re = eval(substr(\$tmp, 0, 2) eq 'qr' ? \$tmp : \"qr\$tmp\"); if (\$@) { [\"Invalid regex: \$@\", \$tmp] } else { [undef, \$re] } } ",
         "    else { [undef, \$tmp] } ",
         "}",
     );
@@ -40,8 +41,13 @@ sub filter {
 }
 
 1;
-# ABSTRACT: Convert string to regex if string is delimited by /.../
+# ABSTRACT: Convert string to regex if string is delimited by /.../ or qr(...)
 
 =for Pod::Coverage ^(meta|filter)$
 
 =head1 DESCRIPTION
+
+Currently for the C<qr(...)> form, unlike in normal Perl, only parentheses C<(>
+and C<)> are allowed as the delimiter.
+
+Currently regex modifiers C<i>, C<m>, and C<s> are allowed at the end.
