@@ -53,3 +53,7 @@ _
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Regexp::From::String>
