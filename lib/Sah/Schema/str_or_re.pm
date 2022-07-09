@@ -56,4 +56,6 @@ _
 
 =head1 SEE ALSO
 
+L<Sah::Schema::re_from_str>
+
 L<Regexp::From::String>
