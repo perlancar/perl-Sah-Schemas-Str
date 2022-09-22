@@ -24,7 +24,7 @@ _
         {value=>'', valid=>0, summary=>'No percent sign'},
         {value=>'1', valid=>0, summary=>'No percent sign'},
         {value=>'1%', valid=>1},
-        {value=>'1 %', valid=>1, summary=>'Whitespace before percent sign is currently not allowed'},
+        {value=>'1 %', valid=>0, summary=>'Whitespace before percent sign is currently not allowed'},
         {value=>'-1.23%', valid=>1},
         {value=>'%', valid=>0, summary=>'Percent sign only'},
     ],
