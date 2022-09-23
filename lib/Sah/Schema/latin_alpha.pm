@@ -21,3 +21,11 @@ our $schema = [str => {
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Sah::Schema::latin_letter>
+
+L<Sah::Schema::latin_uppercase_alpha>
+
+L<Sah::Schema::latin_lowercase_alpha>

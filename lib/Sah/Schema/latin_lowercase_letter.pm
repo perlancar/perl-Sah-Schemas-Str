@@ -1,4 +1,4 @@
-package Sah::Schema::latin_letter;
+package Sah::Schema::latin_lowercase_letter;
 
 use strict;
 
@@ -8,14 +8,16 @@ use strict;
 # VERSION
 
 our $schema = [str => {
-    summary => 'A single latin letter, i.e. A-Z or a-z',
+    summary => 'A single latin lowercase letter, i.e. a-z',
+    'x.perl.coerce_rules' => ['From_str::to_lower'],
     len => 1,
-    match => qr/\A[A-Za-z]\z/,
+    match => qr/\A[a-z]\z/,
 
     examples => [
         {value=>'', valid=>0},
-        {value=>'A', valid=>1},
-        {value=>'AB', valid=>0, summary=>'Multiple letters'},
+        {value=>'A', valid=>1, validated_value=>'a'},
+        {value=>'a', valid=>1},
+        {value=>'ab', valid=>0, summary=>'Multiple letters'},
         {value=>'1', valid=>0, summary=>'Non-letter'},
         {value=>';', valid=>0, summary=>'Non-letter'},
     ],
@@ -27,8 +29,4 @@ our $schema = [str => {
 
 =head1 SEE ALSO
 
-L<Sah::Schema::latin_alpha>
-
 L<Sah::Schema::latin_uppercase_letter>
-
-L<Sah::Schema::latin_lowercase_letter>
