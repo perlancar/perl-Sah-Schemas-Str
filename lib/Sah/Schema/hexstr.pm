@@ -8,11 +8,15 @@ use strict;
 # VERSION
 
 our $schema = [str => {
-    summary => 'String of bytes in hexadecimal',
+    summary => 'String of bytes in hexadecimal notation, e.g. "ab99" or "CAFE"',
+    prefilters => ['Str::remove_whitespace'],
     match => qr/\A(?:[0-9A-Fa-f]{2})*\z/,
 
-    prefilters => ['Str::remove_whitespace'],
+    description => <<'_',
 
+Whitespace is allowed and will be removed.
+
+_
     examples => [
         {value=>'', valid=>1},
         {value=>'a0', valid=>1},

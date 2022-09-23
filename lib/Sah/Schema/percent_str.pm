@@ -10,7 +10,7 @@ use Regexp::Pattern::Float;
 # VERSION
 
 our $schema = [str => {
-    summary => 'A number in percent form',
+    summary => 'A number in percent form, e.g. "10.5%"',
     match => qr/\A$Regexp::Pattern::Float::RE{float_decimal}{pat}%\z/,
 
     description => <<'_',
