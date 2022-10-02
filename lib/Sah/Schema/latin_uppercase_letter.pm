@@ -30,3 +30,5 @@ our $schema = [str => {
 =head1 SEE ALSO
 
 L<Sah::Schema::latin_uppercase_letter>
+
+L<Sah::Schema::lowercase_str>

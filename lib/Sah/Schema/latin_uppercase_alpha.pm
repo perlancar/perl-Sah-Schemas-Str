@@ -33,3 +33,5 @@ _
 L<Sah::Schema::latin_alpha>
 
 L<Sah::Schema::latin_lowercase_alpha>
+
+L<Sah::Schema::lowercase_str>
