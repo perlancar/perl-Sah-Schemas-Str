@@ -9,7 +9,7 @@ use strict;
 
 our $schema = [any => {
     summary => 'String or coderef (if string is of the form `sub {...}`)',
-    description => <<'_',
+    description => <<'MARKDOWN',
 
 Either string or coderef is accepted.
 
@@ -18,10 +18,13 @@ into a coderef. If the code fails to compile, the value will be rejected. Note
 that this means you accept arbitrary code from the user to execute! Please make
 sure first and foremost that this is acceptable in your case.
 
+Currently string is eval'ed in the `main` package, without `use strict` or `use
+warnings`.
+
 This schema is handy if you want to accept string or coderef from the
 command-line.
 
-_
+MARKDOWN
     of => [
         ['str'],
         ['code'],
