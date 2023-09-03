@@ -56,6 +56,10 @@ _
 
 =head1 SEE ALSO
 
+L<Sah::Schema::str_or_re_or_code>
+
+L<Sah::Schema::str_or_code>
+
 L<Sah::PSchema::re_from_str>
 
 L<Regexp::From::String>
