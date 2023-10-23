@@ -1,5 +1,6 @@
 package Sah::Schemas::Str;
 
+use 5.014;
 use strict;
 
 # AUTHORITY
