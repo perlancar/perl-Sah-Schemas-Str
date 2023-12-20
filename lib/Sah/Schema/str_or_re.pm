@@ -9,7 +9,7 @@ use strict;
 
 our $schema = [any => {
     summary => 'String or regex (if string is of the form `/.../`)',
-    description => <<'_',
+    description => <<'MARKDOWN',
 
 Either string or Regexp object is accepted.
 
@@ -22,7 +22,14 @@ and `)` are allowed as the delimiter.
 
 Currently modifiers `i`, `m`, and `s` after the second `/` are allowed.
 
-_
+What's the difference between this schema and `re_from_str` (from
+<pm:Sah::Schemas::Re>)? Both this schema and `re_from_str` accept string, but
+this schema will leave strings not in the form of `/.../` or `qr(...)` as-is,
+while `re_from_str` will still convert the string to Regexp object (after
+escaping the special characters). In other words, this schema can produce
+strings while `str_or_re` always produces Regexp object.
+
+MARKDOWN
     of => [
         ['str'],
         ['re'],

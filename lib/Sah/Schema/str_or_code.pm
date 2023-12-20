@@ -24,6 +24,13 @@ warnings`.
 This schema is handy if you want to accept string or coderef from the
 command-line.
 
+What's the difference between this schema and `code_from_str` (from
+<pm:Sah::Schemas::Code>)? Both this schema and `code_from_str` accept string,
+but `code_from_str` will directly compile any input string while this schema
+will only convert string to code if it is in the form of `sub { ... }`. In other
+words, this schema can output either string or coderef, while `code_from_str`
+will always produce coderef.
+
 MARKDOWN
     of => [
         ['str'],
