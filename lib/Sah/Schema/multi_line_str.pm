@@ -15,7 +15,7 @@ String cannot be empty or just contain a single line of text; it must contain at
 least one of either \x0D or \x0A character.
 
 MARKDOWN
-    match => qr/\A(?!.*[\x0A\x0D]).*\z/,
+    match => qr/[\x0a\x0d]/,
     examples => [
         {value=>'', valid=>0},
         {value=>'a', valid=>0},
